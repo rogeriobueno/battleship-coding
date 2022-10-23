@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /battleship-service
+spring:
+  profiles:
+    active: prod
+  kafka:
+    bootstrap-servers: localhost:29092,localhost:39092
+    consumer:
+      group-id: battleship
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  show-actuator: true
+
+topics:
+  gamenew: battleship.game.new
+  gamefieldfire: battleship.game.field.fire
+
