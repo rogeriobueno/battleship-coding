@@ -33,6 +33,6 @@ jobs:
 
       - name: Push to Docker Hub registry
         run: |
-          docker push ${{secrets.DOCKER_USERNAME}}/battle-api:latest
+          docker push ${{secrets.DOCKER_USERNAME}}/battleship-api:latest
 
-          docker push ${{secrets.DOCKER_USERNAME}}/battle-async:latest
+          docker push ${{secrets.DOCKER_USERNAME}}/battleship-async:latest
