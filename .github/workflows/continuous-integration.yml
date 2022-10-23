@@ -31,9 +31,8 @@ jobs:
       - name: Build with Docker Compose
         run: docker compose build
 
-      - name: Push to Docker Hub registry
-        run: |
-          docker tag ${{secrets.DOCKER_USERNAME}}/battle-ship:latest ${{secrets.DOCKER_USERNAME}}/battle-ship:${{github.run_id}} 
-          
-          docker push ${{secrets.DOCKER_USERNAME}}/battle-ship:${{github.run_id}}
+      - name: Build and push Docker images
+        with:
+          push: true
+          tags: ${{secrets.DOCKER_USERNAME}}/battle-ship:latest
 
