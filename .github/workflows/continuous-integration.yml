@@ -32,6 +32,7 @@ jobs:
         run: docker compose build
 
       - name: Build and push Docker images
+        uses: docker/build-push-action@v3
         with:
           push: true
           tags: ${{secrets.DOCKER_USERNAME}}/battle-ship:latest
