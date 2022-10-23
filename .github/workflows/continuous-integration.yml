@@ -33,7 +33,5 @@ jobs:
 
       - name: Push to Docker Hub registry
         run: |
-          docker tag ${{secrets.DOCKER_USERNAME}}/battle-ship:latest  
-          
           docker push ${{secrets.DOCKER_USERNAME}}/battle-ship:latest
 
