@@ -27,7 +27,7 @@ services:
       - battle-network
 
   battleship-async:
-    image: battleship-async/battleship_api
+    image: rogerbu/battleship-async
     build:
       context: ./battleship-async
     container_name: battleship-async
