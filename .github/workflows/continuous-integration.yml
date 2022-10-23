@@ -1,4 +1,4 @@
-name: [ Battle-Ship ]Continuous Integrations with Java Spring and Docker
+name: Battle-Ship-Continuous Integrations with Java Spring and Docker
 
 on:
   push:
